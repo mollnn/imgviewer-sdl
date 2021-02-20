@@ -26,9 +26,9 @@ double fDeGamma(double x, double gamma = 2.2)
 
 vec3 colorDeGamma(vec3 c, double gamma = 2.2)
 {
-    c.x = fDeGamma(c.x);
-    c.y = fDeGamma(c.y);
-    c.z = fDeGamma(c.z);
+    c.x = fDeGamma(c.x, gamma);
+    c.y = fDeGamma(c.y, gamma);
+    c.z = fDeGamma(c.z, gamma);
     return c;
 }
 
@@ -39,9 +39,9 @@ double fEnGamma(double x, double gamma = 2.2)
 
 vec3 colorEnGamma(vec3 c, double gamma = 2.2)
 {
-    c.x = fEnGamma(c.x);
-    c.y = fEnGamma(c.y);
-    c.z = fEnGamma(c.z);
+    c.x = fEnGamma(c.x, gamma);
+    c.y = fEnGamma(c.y, gamma);
+    c.z = fEnGamma(c.z, gamma);
     return c;
 }
 

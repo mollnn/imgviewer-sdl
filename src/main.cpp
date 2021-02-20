@@ -158,5 +158,14 @@ void renderImage(Image &image)
 void renderBMP(Bitmap &bitmap)
 {
 	Image image = createImageFromBMP(bitmap);
+	int img_width = image.size_x;
+	int img_height = image.size_y;
+	for (int y = 0; y < img_height; y++)
+	{
+		for (int x = 0; x < img_width; x++)
+		{
+			image.Set(x, y, colorEnGamma(colorEnGamma(image.Get(x, y), 2.2), 1 / 2.2));
+		}
+	}
 	renderImage(image);
 }

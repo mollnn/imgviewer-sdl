@@ -87,5 +87,5 @@ clean:
 	@echo Cleanup complete!
 
 run: all
-	./output/main.exe test2.bmp
+	./output/main.exe ./output/bitmap.bmp
 	@echo Executing 'run: all' complete!
